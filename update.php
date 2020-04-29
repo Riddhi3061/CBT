@@ -4,7 +4,7 @@ session_start();
 $email=$_SESSION['email'];
 //delete feedback
 if(isset($_SESSION['key'])){
-if(@$_GET['fdid'] && $_SESSION['key']=='prasanth123') {
+if(@$_GET['fdid'] && $_SESSION['key']=='riddhi') {
 $id=@$_GET['fdid'];
 $result = mysqli_query($con,"DELETE FROM feedback WHERE id='$id' ") or die('Error');
 header("location:headdash.php?q=3");
@@ -13,7 +13,7 @@ header("location:headdash.php?q=3");
 
 //delete user
 if(isset($_SESSION['key'])){
-if(@$_GET['demail'] && $_SESSION['key']=='prasanth123') {
+if(@$_GET['demail'] && $_SESSION['key']=='riddhi') {
 $demail=@$_GET['demail'];
 $r1 = mysqli_query($con,"DELETE FROM rank WHERE email='$demail' ") or die('Error');
 $r2 = mysqli_query($con,"DELETE FROM history WHERE email='$demail' ") or die('Error');
@@ -25,7 +25,7 @@ header("location:headdash.php?q=1");
 //delete admin
 
 if(isset($_SESSION['key'])){
-if(@$_GET['demail1'] && $_SESSION['key']=='prasanth123') {
+if(@$_GET['demail1'] && $_SESSION['key']=='riddhi') {
 $demail1=@$_GET['demail1'];
 
 $result = mysqli_query($con,"DELETE FROM admin WHERE email='$demail1' and role ='admin' ") or die('Error');
